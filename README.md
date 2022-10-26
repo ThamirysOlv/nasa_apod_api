@@ -1,3 +1,3 @@
 ## NASA APOD API
 
-### test
+The purpose of this project is to use NASA's Astronomy Picture of the Day API.
