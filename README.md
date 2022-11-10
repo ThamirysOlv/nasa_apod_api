@@ -1,3 +1,10 @@
-## NASA APOD API
+# NASA APOD API
 
-The purpose of this project is to use NASA's Astronomy Picture of the Day API.
+The purpose of this project is to consume NASA's Astronomy Picture of the Day API.
+
+This project is using the following technologies (see versions in requirements.txt):
+- python
+- requests
+- python-decouple
+
+For more details go to documentation.md
