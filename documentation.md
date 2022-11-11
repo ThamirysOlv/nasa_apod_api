@@ -11,7 +11,9 @@ To create your own key go to: https://api.nasa.gov/#signUp
 
 The default value has some limitation. For more information go to NASA's website.
 
-## URL search params:
+mongodb.connection.db_connect() creates the connection with mongodb.
+
+## URL search params and the class Requesting_api:
 This project is requesting https://api.nasa.gov/planetary/apod.
 
 The class Requesting_api gets a response from the NASA's apod api and returns it as a list of json. The expected parameters for searching the data are:
@@ -35,3 +37,13 @@ OR
 - if params is empty: date = today is returned.
 
 This class checks if the params given are valid. If the params are valid, it returns a list of json. If the params are not valid, it returns an error message.
+
+## Database connection and adding responses
+The directory mongodb/ has two files: 
+
+- connection.py: creates a connection with mongodb using default host and port.
+
+- apod.py: creates the collection 'apod' that will keeps the saved data.
+
+In the main.py file, the function save_request() add the response to the database if the request was valid. If the request was not valid it returns an error message and
+does not add to in the database.

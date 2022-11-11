@@ -11,3 +11,8 @@ This project is using the following technologies (see versions in requirements.t
 
 
 For more details go to documentation.md.
+
+# To-do
+- [ ] Check if response data is already in the database. Do not add to the database if duplicate.
+- [ ] Dockerize application.
+- [ ] Add tests.
