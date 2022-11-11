@@ -6,5 +6,8 @@ This project is using the following technologies (see versions in requirements.t
 - python
 - requests
 - python-decouple
+- mongo-db
+- mongoengine
 
-For more details go to documentation.md
+
+For more details go to documentation.md.

@@ -5,16 +5,23 @@ For documentation go to documentation.md
 
 import requests
 from decouple import config
+import mongoengine as mg
 
 '''
 Importing libraries
-    - requests : send HTTP requests
-    - decouple : deal with environment variables      
+    - requests    : send HTTP requests
+    - decouple    : deal with environment variables
+    - mongoengine : connect python and mongodb      
 '''
+
+''' Importing connections with database '''
+import mongodb.connection as cn
+from mongodb.apod import Apod
 
 ''' Config '''
 api_key = config('PERSONAL_API_KEY', default='DEMO_KEY')
 api_url = 'https://api.nasa.gov/planetary/apod'
+cn.db_connect()
 
 ''' Classes '''
 class Requesting_api:
@@ -83,3 +90,4 @@ class Requesting_api:
 
 
 print(Requesting_api().list_json_response())
+test = Apod(date='2022-10-11').save()
