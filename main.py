@@ -15,7 +15,8 @@ params={
     'start_date': '2022-10-03', 
     'end_date': '2022-10-08'
 }
-
+import mongodb.connection
 #print(Apod.objects(date='2022-11-11').all())
+mongodb.connection.db_connect()
 
 save_request(Requesting_api(**params).list_json_response())
