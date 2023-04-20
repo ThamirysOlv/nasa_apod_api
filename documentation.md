@@ -9,6 +9,14 @@ For quick use:
 - change the params variable in main.py as needed.
 - run: python main.py
 
+For use with a venv:
+
+- python -m venv venv
+- source /venv/bin/activate
+- pip install -r requirements.txt
+- change the params variable in main.py as needed.
+- run: python main.py
+
 ## Config in get_response.py:
 api_key, default=DEMO_KEY. 
 
@@ -39,18 +47,17 @@ OR
 
 OR
 
-- if params is empty: date = today is returned.
+- if params is None for all parameters: date = today is returned.
 
 This class checks if the params given are valid. If the params are valid, it returns a list of json. If the params are not valid, it returns an error message.
 
-## Database connection and adding responses
+## Database connection and adding responses to the database
 The directory mongodb/ has two files: 
 
 - connection.py: creates a connection with mongodb using default host and port.
 
 - apod.py: creates the collection 'apod' that will keeps the data.
 
-In the get_response.py file, the function save_request() add the response to the database if the request is valid. If the request is not valid, it returns an error message and
-does not add it to in the database.
+In the get_response.py file, the function save_request() add the response to the database if the request is valid. If the request is not valid, it returns an error message and does not add it to the database.
 
 Duplicate dates data is not added to the database.

@@ -112,5 +112,3 @@ def save_request(your_request):
                 print(f"Date {item.get('date')} data added to the database!")
             else:
                 print(f"Date {item.get('date')} data it is already in the database. Duplicated entries are not allowed!")
-
-# CREATE CODE FOR CHECKING IF DATE ALREADY EXISTS IN THE DATABASE
